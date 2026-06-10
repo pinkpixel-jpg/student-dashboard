@@ -1,7 +1,9 @@
-import { supabase } from "./supabase";
 import { Course } from "./types";
+import { createSupabaseClient } from "./supabase";
 
 export async function getCourses(): Promise<Course[]> {
+  const supabase = createSupabaseClient();
+
   const { data, error } = await supabase
     .from("courses")
     .select("*");
