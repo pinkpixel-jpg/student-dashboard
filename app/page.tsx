@@ -1,17 +1,16 @@
-import CourseCard from "../components/CourseCard";
+import Sidebar from "../components/Sidebar";
+import HeroTile from "../components/HeroTile";
+import ActivityTile from "../components/ActivityTile";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black p-10">
-      <CourseCard
-        course={{
-          id: "1",
-          title: "Frontend Development",
-          progress: 75,
-          icon_name: "Code2",
-          created_at: "",
-        }}
-      />
+    <main className="flex min-h-screen bg-black">
+      <Sidebar />
+
+      <section className="flex-1 p-6 space-y-6">
+        <HeroTile />
+        <ActivityTile />
+      </section>
     </main>
   );
 }
