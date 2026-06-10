@@ -1,16 +1,13 @@
-import Sidebar from "../components/Sidebar";
-import HeroTile from "../components/HeroTile";
-import ActivityTile from "../components/ActivityTile";
+import { getCourses } from "../lib/getCourse";
 
-export default function Home() {
+export default async function Home() {
+  const courses = await getCourses();
+
   return (
-    <main className="flex min-h-screen bg-black">
-      <Sidebar />
-
-      <section className="flex-1 p-6 space-y-6">
-        <HeroTile />
-        <ActivityTile />
-      </section>
+    <main className="min-h-screen bg-black p-8 text-white">
+      <pre>
+        {JSON.stringify(courses, null, 2)}
+      </pre>
     </main>
   );
 }
