@@ -18,7 +18,7 @@ export default function Sidebar() {
     <aside className="hidden md:block h-screen w-20 lg:w-64 border-r border-white/10 bg-zinc-950 p-4">
       <nav>
         <h2 className="mb-8 text-xl font-bold text-white">
-          LearnHub
+          studyFlow
         </h2>
 
         <ul className="space-y-2">

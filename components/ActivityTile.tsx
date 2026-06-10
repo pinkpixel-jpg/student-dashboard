@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const activity = [35, 60, 40, 80, 55, 90, 70];
+const activity = [55, 25, 40, 90, 55, 60, 70];
 
 export default function ActivityTile() {
   return (
