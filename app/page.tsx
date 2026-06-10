@@ -1,12 +1,11 @@
+import { Suspense } from "react";
 import Sidebar from "../components/Sidebar";
 import HeroTile from "../components/HeroTile";
 import ActivityTile from "../components/ActivityTile";
-import CourseCard from "../components/CourseCard";
-import { getCourses } from "../lib/getCourse";
+import CourseSkeleton from "../components/CourseSkeleton";
+import CoursesGrid from "./CourseGrid";
 
-export default async function Home() {
-  const courses = await getCourses();
-
+export default function Home() {
   return (
     <main className="flex min-h-screen bg-black">
       <Sidebar />
@@ -17,12 +16,17 @@ export default async function Home() {
             <HeroTile />
           </div>
 
-          {courses.map((course) => (
-            <CourseCard
-              key={course.id}
-              course={course}
-            />
-          ))}
+          <Suspense
+            fallback={
+              <>
+                <CourseSkeleton />
+                <CourseSkeleton />
+                <CourseSkeleton />
+              </>
+            }
+          >
+            <CoursesGrid />
+          </Suspense>
 
           <div className="lg:col-span-3">
             <ActivityTile />
