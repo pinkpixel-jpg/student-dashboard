@@ -8,7 +8,7 @@ export default function HeroTile() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="rounded-3xl border border-white/10 bg-zinc-900 p-6"
+      className="rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-900 to-black p-8"
     >
       <div className="space-y-3">
         <h1 className="text-3xl font-bold text-white">

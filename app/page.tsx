@@ -11,7 +11,7 @@ export default function Home() {
       <Sidebar />
 
       <section className="flex-1 p-6">
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div className="lg:col-span-3">
             <HeroTile />
           </div>

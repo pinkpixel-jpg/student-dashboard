@@ -15,7 +15,7 @@ export default function Sidebar() {
   const [active, setActive] = useState("Dashboard");
 
   return (
-    <aside className="h-screen w-64 border-r border-white/10 bg-zinc-950 p-4">
+    <aside className="hidden md:block h-screen w-20 lg:w-64 border-r border-white/10 bg-zinc-950 p-4">
       <nav>
         <h2 className="mb-8 text-xl font-bold text-white">
           LearnHub
@@ -44,8 +44,8 @@ export default function Sidebar() {
                   )}
 
                   <Icon className="relative z-10 h-5 w-5" />
-                  <span className="relative z-10">
-                    {item.name}
+                  <span className="relative z-10 hidden lg:inline">
+                   {item.name}
                   </span>
                 </button>
               </li>

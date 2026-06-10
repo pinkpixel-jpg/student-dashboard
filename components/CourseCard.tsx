@@ -28,7 +28,7 @@ export default function CourseCard({
         stiffness: 300,
         damping: 20,
       }}
-      className="rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-900 to-zinc-950 p-6"
+      className="rounded-3xl border border-cyan-500/10 bg-gradient-to-br from-zinc-900 to-zinc-950 p-6 shadow-lg shadow-cyan-500/5"
     >
       <div className="mb-4 flex items-center justify-between">
         <LucideIcon className="h-8 w-8 text-cyan-400" />
